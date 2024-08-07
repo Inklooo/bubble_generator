@@ -2,3 +2,10 @@ body{
   overflow: hidden;
   height: 100vh;
 }
+
+/*creation de la bulle en css*/
+.bubble {
+  position: absolute;
+  background: blue;
+  border-radius: 300px;
+}
