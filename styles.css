@@ -8,4 +8,20 @@ body{
   position: absolute;
   background: blue;
   border-radius: 300px;
+  /*nous allons donner une direction du bas vers le haut a la bulle*/
+  opacity: 0;
+  animation: anim 8s forwards;
+  /*changer la couleur aleatoire*/
+  filter: hue-rotate(odeg);
+}
+
+/*animation créé pour le bulle du bas vers le haut*/
+@keyframes anim {
+  to{
+    top: -250px;
+    left: var(--left);
+    opacity:1 ;
+    filter: hue-rotate(720deg);
+  }
+
 }
