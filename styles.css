@@ -1,6 +1,8 @@
 body{
   overflow: hidden;
   height: 100vh;
+  /* nous allons mettre un curser en croix sur la sourris*/
+  cursor: crosshair;
 }
 
 /*creation de la bulle en css*/
@@ -23,5 +25,10 @@ body{
     opacity:1 ;
     filter: hue-rotate(720deg);
   }
-
+}
+h3{
+  font-size: 10rem;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(218, 205, 205);
 }
