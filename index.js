@@ -1,3 +1,10 @@
+//création d'un compteur
+const counterDisplay = document.querySelector("h3");
+
+//Creation d'une variable pour le compteur qui poart de zero et qui va évoluer
+let counter = 0;
+
+
 // une fois que la logique fonctionne pour la bulle nous pouvons créer une fonction pour cela
 const bubbleMaker = () =>{
 
@@ -31,7 +38,18 @@ const bubbleMaker = () =>{
   const plusMinus = Math.random() > 0.5 ? 1 : -1;
   bubble.style.setProperty("--left", Math.random() *100 + "%");
 
+  //nous allons ajouter un évenement poiur effacer les bulles quand on clique desus
+  bubble.addEventListener("click", () => {
+    counter++; //ajouter au compteur avec chaque click
+    counterDisplay.textContent = counter; // nous ajoutons le compte au compteur avec un text content pour qu'il s'affiche
+    bubble.remove();
+  });
+
+  //nous demandons d'effacer les bulles au bout de 8 secondes
+  setTimeout(() => {
+    bubble.remove
+  }, 8000);
 };
 
-//la fonction bubbleMaker sera jouer en interval de 3 secondes
-setInterval(bubbleMaker, 3000) ;
+//la fonction bubbleMaker sera jouer en interval de 1 secondes
+setInterval(bubbleMaker, 1000) ;
